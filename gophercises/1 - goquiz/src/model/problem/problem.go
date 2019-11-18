@@ -29,6 +29,10 @@ func (p *Problem) GetAnswer() string {
 	return p.answer
 }
 
+func (p *Problem) Ask() {
+	fmt.Printf("What is %v = ? ", p.question)
+}
+
 func (p *Problem) CheckAns(ans string) bool {
 	return p.answer == ans
 }

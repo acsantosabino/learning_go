@@ -7,6 +7,7 @@
 ``` bash
 export GOPATH=`pwd`
 mkdir bin
+mkdir src
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH/bin:$PATH
 ```
