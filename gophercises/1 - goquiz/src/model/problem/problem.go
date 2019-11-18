@@ -13,7 +13,7 @@ type Problem struct {
 	answer   string
 }
 
-var path = "./data/problems.csv"
+var defealtPath = "./data/problems.csv"
 
 func (p *Problem) SetQuestion(q string) {
 	p.question = q
@@ -37,7 +37,12 @@ func (p *Problem) CheckAns(ans string) bool {
 	return p.answer == ans
 }
 
-func ReadProblems() (list []Problem) {
+func ReadProblems(path string) (list []Problem) {
+
+	if path == "" {
+		path = defealtPath
+	}
+
 	f, err := os.Open(path)
 
 	if err != nil {
